@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BANK DATA Puskesmas Perawatan Giri Mulya</title>
+<style>
+*{box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{margin:0;background:#f3fbfa;color:#263238}
+.hero{
+height:430px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(rgba(0,121,107,.55),rgba(0,105,92,.75)),
+url('assets/gedung-puskesmas.png') center/cover;
+}
+.hero:after{
+content:"";
+position:absolute;
+bottom:-60px;
+width:120%;
+height:100px;
+background:#f3fbfa;
+border-radius:50%;
+}
+.logo{
+width:90px;
+height:90px;
+object-fit:contain;
+background:white;
+border-radius:50%;
+padding:8px;
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+animation:float 3s infinite;
+}
+@keyframes float{50%{transform:translateY(-10px)}}
+.hero-content{color:white;z-index:2}
+h1{font-size:42px;margin:15px 0 5px}
+h2{font-weight:400;margin:0}
+.subtitle{margin-top:15px}
+.container{max-width:1000px;margin:-20px auto 40px;padding:20px;position:relative;z-index:3}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.card{
+background:rgba(255,255,255,.85);
+backdrop-filter:blur(10px);
+border-radius:25px;
+padding:35px;
+text-align:center;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.35s
+}
+.card:hover{transform:translateY(-12px) scale(1.04);box-shadow:0 20px 40px rgba(0,137,123,.3)}
+.icon{font-size:55px}
+.card h3{color:#00796b}
+.page{display:none;animation:slide .4s}
+.page.active{display:block}
+@keyframes slide{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+.sub-card{
+display:block;
+background:white;
+padding:20px;
+margin:15px 0;
+border-radius:20px;
+text-decoration:none;
+color:#263238;
+font-size:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s
+}
+.sub-card:hover{transform:translateX(10px);background:#e0f2f1}
+.back{
+background:#00796b;color:white;border:0;
+padding:12px 22px;border-radius:30px;cursor:pointer
+}
+.footer{text-align:center;padding:30px;color:#607d8b}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="hero-content">
+<img class="logo" src="assets/logo-puskesmas.jpg">
+<h1>BANK DATA</h1>
+<h2>PUSKESMAS PERAWATAN GIRI MULYA</h2>
+<p class="subtitle">Sistem Informasi Data, Laporan dan Dokumentasi</p>
+</div>
+</section>
+
+<div class="container">
+<div id="home" class="page active">
+<div class="grid">
+<div class="card" onclick="openPage('perencanaan')"><div class="icon">📋</div><h3>Perencanaan</h3></div>
+<div class="card" onclick="openPage('keuangan')"><div class="icon">💰</div><h3>Keuangan</h3></div>
+<div class="card" onclick="openPage('laporan')"><div class="icon">📄</div><h3>Laporan</h3></div>
+<div class="card" onclick="openPage('bank')"><div class="icon">📊</div><h3>Bank Data</h3></div>
+</div>
+</div>
+
+<div id="perencanaan" class="page">
+<button class="back" onclick="home()">← Kembali</button>
+<h2>📋 Perencanaan</h2>
+<a class="sub-card" href="https://drive.google.com/drive/folders/1ofLdlcGCfCMjQirt0zPGdxEmiKG2CoBJ" target="_blank">👥 Pemberdayaan Masyarakat</a>
+<a class="sub-card" href="https://drive.google.com/drive/folders/1x448AyiJyYLKfwmx0fYBWoZ93i7OUpKf" target="_blank">🏥 Kegiatan Puskesmas</a>
+<a class="sub-card" href="https://drive.google.com/drive/folders/1Rk81c_Knv1NgkbhrmWWaDMHF4HJ8je5r" target="_blank">💵 Anggaran</a>
+</div>
+
+<div id="keuangan" class="page">
+<button class="back" onclick="home()">← Kembali</button>
+<h2>💰 Keuangan</h2>
+<a class="sub-card" href="https://drive.google.com/drive/folders/1j_v_ehKT-4UAczFmV_RH0M_N6Ve-uUyU" target="_blank">💵 Realisasi</a>
+<a class="sub-card" href="https://docs.google.com/forms/d/e/1FAIpQLSdQE1_wrq9sxsvdAUpeBFtbeuU7W9MOILgssVoKEU7MvcQbzA/viewform" target="_blank">📝 Kegiatan APBD</a>
+<a class="sub-card" href="https://docs.google.com/forms/d/e/1FAIpQLScc0brNTdrWpGv88aTCksAUyXmkT6JICwwlnBzm8hryXu4rhw/viewform" target="_blank">📝 Kegiatan BOK</a>
+</div>
+
+<div id="laporan" class="page">
+<button class="back" onclick="home()">← Kembali</button>
+<h2>📄 Laporan</h2>
+<a class="sub-card" href="https://drive.google.com/drive/folders/1zs2JVJeLPd42OsdC4b0Fmn3x-qrwSdyk" target="_blank">🏢 Lokmin</a>
+<a class="sub-card" href="https://drive.google.com/drive/folders/13llvFwOfnCratDcbFbrMBRI5PJn0Zew5" target="_blank">❤️ Laporan Mutu</a>
+<a class="sub-card" href="https://drive.google.com/drive/folders/10AnSsg4gKNQi9kVWLl-y59IIADyzMAf_" target="_blank">📅 Laporan Bulanan</a>
+<a class="sub-card" href="https://drive.google.com/drive/folders/1Uwnqh9VvHm8SmfV-jFrxg_5qB2aVqftE" target="_blank">📆 Laporan Tahunan</a>
+<a class="sub-card" href="https://docs.google.com/spreadsheets/d/17zQV2dzr8XCdtVXGvYiijEOtUDEuNIIc" target="_blank">📊 Monitoring dan Evaluasi</a>
+</div>
+
+<div id="bank" class="page">
+<button class="back" onclick="home()">← Kembali</button>
+<h2>📊 Bank Data</h2>
+<a class="sub-card" href="https://docs.google.com/spreadsheets/d/1S8WKujYh4s6_RdNQJ29wI0fzK5y1H3CEEiBeTqi8ZVU" target="_blank">🔒 BANK DATA (TERBATAS)</a>
+</div>
+</div>
+
+<div class="footer">© Puskesmas Perawatan Giri Mulya</div>
+
+<script>
+function openPage(id){
+document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+function home(){
+document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+document.getElementById('home').classList.add('active');
+}
+</script>
+</body>
+</html>
